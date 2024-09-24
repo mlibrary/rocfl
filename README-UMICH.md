@@ -7,4 +7,4 @@ Manually trigger [Build rocfl image](https://github.com/mlibrary/rocfl/actions/w
 docker pull ghcr.io/mlibrary/rocfl/rocfl:latest
 ```
 
-This package is used in the [dor-rocfl-experiment](https://github.com/mlibrary/dor-rocfl-experiment) [Dockerfile](https://github.com/mlibrary/dor-rocfl-experiment/blob/main/Dockerfile) to copy the `rocfl` command to the image.
+This package is used in the [dor-rocfl-experiment](https://github.com/mlibrary/dor-rocfl-experiment) [Dockerfile](https://github.com/mlibrary/dor-rocfl-experiment/blob/main/Dockerfile)
