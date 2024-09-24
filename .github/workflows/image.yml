@@ -1,5 +1,5 @@
 ---
-name: 1. Build rocfl image
+name: Build rocfl image
 
 on:
   workflow_dispatch:  # This allows to kick-off the action manually from GitHub Actions
