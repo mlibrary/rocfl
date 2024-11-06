@@ -1,0 +1,24 @@
+---
+services:
+  app:
+    hostname: app.local
+    networks:
+      default:
+        aliases: [ "app" ]
+    build:
+      context: .
+      target: development
+      dockerfile: pyrocfl.dockerfile
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+        DEV: ${DEV:-false}
+        POETRY_VERSION: ${POETRY_VERSION:-1.8.4}
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    tty: true
+    stdin_open: true
+networks:
+  default:
