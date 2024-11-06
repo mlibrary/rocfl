@@ -1,3 +1,7 @@
+// rustimport:pyo3
+
+use pyo3::prelude::*;
+
 use std::collections::{HashMap, HashSet};
 use std::convert::TryInto;
 use std::fs;
@@ -1481,6 +1485,7 @@ fn logical_path_in_dst_dir_internal(
 /// attempts to resolve the digest to a content path within the staging directory. If it
 /// is able to, then the digest and content path are returned. If it is not, nothing is
 /// returned.
+#[pyfunction]
 fn lookup_staged_digest_and_content_path(
     inventory: &Inventory,
     src_version_num: VersionNum,

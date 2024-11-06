@@ -17,7 +17,7 @@ services:
     env_file:
       - .env
     volumes:
-      - .:/app
+      - .:/app/pyrocfl
     tty: true
     stdin_open: true
 networks:

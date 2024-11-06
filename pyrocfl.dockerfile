@@ -31,6 +31,8 @@ RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
   vim-tiny
 
 # Set the working directory to /app
+RUN mkdir -p /app
+RUN chown -R app:app /app
 WORKDIR /app
 
 # Install rust toolchain

@@ -2,7 +2,7 @@
 name = "pyrocfl"
 version = "0.1.0"
 description = "pyo3-rocfl"
-authors = ["Your Name <you@example.com>"]
+authors = ["Greg Kostin <gkostin@umich.edu>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
