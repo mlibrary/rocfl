@@ -21,7 +21,7 @@ ENV PYTHONPATH="/app"
 # Create our users here in the last layer or else it will be lost in the previous discarded layers
 # Create a system group named "app_user" with the -r flag
 RUN groupadd -g ${GID} -o app
-RUN useradd -m -d /app -u ${UID} -g ${GID} -o -s /bin/bash app
+RUN useradd -m -u ${UID} -g ${GID} -o -s /bin/bash app
 
 RUN apt-get update -yqq && apt-get install -yqq --no-install-recommends \
   python3-dev \ 
@@ -36,7 +36,7 @@ WORKDIR /app
 # Install rust toolchain
 USER app
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-ENV PATH="/app/.cargo/bin:$PATH"
+ENV PATH="/home/app/.cargo/bin:$PATH"
 
 USER root
 CMD ["tail", "-f", "/dev/null"]
